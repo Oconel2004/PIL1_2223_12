@@ -1,0 +1,30 @@
+/* style.css */
+
+/* Ajouter des styles personnalisés au formulaire d'inscription */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+.login-link {
+  color: blue;
+}
+
+/* Ajouter des styles pour rendre le formulaire réactif */
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+}
