@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .models import EmploiDuTemps, Utilisateur
-# Create your views here.
 
 def accueil(request):
     # Vue pour afficher la page d'accueil
@@ -13,7 +12,7 @@ def consulter_emploi_du_temps(request, emploi_du_temps_id):
     emploi_du_temps = EmploiDuTemps.objects.get(id=emploi_du_temps_id)
     return render(request, 'emploi_du_temps.html', {'emploi_du_temps': emploi_du_temps})
 
-def inscription(request):
+def creer_compte(request):
     # Vue pour la création de compte utilisateur
     if request.method == 'POST':
         username = request.POST['username']
@@ -31,7 +30,7 @@ def inscription(request):
     
     return render(request, 'inscription.html')
 
-def connexion(request):
+def se_connecter(request):
     # Vue pour la connexion de l'utilisateur
     if request.method == 'POST':
         username = request.POST['username']
