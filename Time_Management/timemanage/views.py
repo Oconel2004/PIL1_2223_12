@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .models import EmploiDuTemps, Utilisateur
@@ -50,3 +51,13 @@ def se_deconnecter(request):
     # Vue pour la déconnexion de l'utilisateur
     logout(request)
     return redirect('accueil')
+=======
+from django.contrib.auth import login, logout, authenticate
+from django.shortcuts import render, redirect
+
+# Create your views here.
+
+def login(request):
+    return render(request, 'connexion.html')
+
+>>>>>>> Stashed changes
