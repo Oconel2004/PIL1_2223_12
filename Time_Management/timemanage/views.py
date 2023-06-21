@@ -13,7 +13,7 @@ def consulter_emploi_du_temps(request, emploi_du_temps_id):
     emploi_du_temps = EmploiDuTemps.objects.get(id=emploi_du_temps_id)
     return render(request, 'emploi_du_temps.html', {'emploi_du_temps': emploi_du_temps})
 
-def creer_compte(request):
+def inscription(request):
     # Vue pour la création de compte utilisateur
     if request.method == 'POST':
         username = request.POST['username']
@@ -22,16 +22,16 @@ def creer_compte(request):
 
         # Vérifier si l'utilisateur existe déjà
         if Utilisateur.objects.filter(username=username).exists():
-            return render(request, 'creer_compte.html', {'error_message': 'Ce nom d\'utilisateur existe déjà.'})
+            return render(request, 'inscription.html', {'error_message': 'Ce nom d\'utilisateur existe déjà.'})
         
         # Créer un nouvel utilisateur
         user = Utilisateur.objects.create_user(username=username, password=password, role=role)
         login(request, user)
         return redirect('accueil')
     
-    return render(request, 'creer_compte.html')
+    return render(request, 'inscription.html')
 
-def se_connecter(request):
+def connexion(request):
     # Vue pour la connexion de l'utilisateur
     if request.method == 'POST':
         username = request.POST['username']
