@@ -2,11 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .models import EmploiDuTemps, Utilisateur
 # Create your views here.
-def register(request):
-    return render(request, 'inscription.html')
 
-def login(request):
-    return render(request, 'connexion.html')
 def accueil(request):
     # Vue pour afficher la page d'accueil
     emplois_du_temps = EmploiDuTemps.objects.all()
