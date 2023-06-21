@@ -43,9 +43,9 @@ def se_connecter(request):
             login(request, user)
             return redirect('accueil')
         else:
-            return render(request, 'se_connecter.html', {'error_message': 'Nom d\'utilisateur ou mot de passe incorrect.'})
+            return render(request, 'connexion.html', {'error_message': 'Nom d\'utilisateur ou mot de passe incorrect.'})
     
-    return render(request, 'se_connecter.html')
+    return render(request, 'connexion.html')
 
 def se_deconnecter(request):
     # Vue pour la déconnexion de l'utilisateur
