@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color:blue;
+}
+
+h2{
+    text-align: center;
+    color: blue;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+p{
+    margin-left: 30px;
+}
+
+li{
+    color: darkblue;
+}
+
+h3{
+    text-decoration: underline;
+}
+strong{
+    text-decoration: underline;
+}
+
+p{
+    font-size: large;
+    
+}
