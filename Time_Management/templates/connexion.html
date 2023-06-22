@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,33 +15,10 @@
   <div class="container">
     <div class="row justify-content-center mt-5">
       <div class="col-lg-4 col-md-6">
-<<<<<<< Updated upstream
+
         <h2 class="mb-4" style="text-decoration: underline; font-family: cursive; margin: 10% 80% 10% 30%;font-weight: 150%;color: white;">Connexion</h2>
         <section style="background-color: beige; font-family: cursive;border-radius: 15px; box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 100); padding: 10% 20% 20% 10%;">
-        <div class="mb-3">
-          <label for="userType" class="form-label" style="font-weight: bold; text-decoration: underline;">Profil</label>
-=======
-        <h2 class="mb-4">Connexion</h2>
-        <!-- <div class="mb-3">
-          <label for="userType" class="form-label">Je suis</label>
->>>>>>> Stashed changes
-          <select id="userType" class="form-select">
-            <option value="student">Étudiant</option>
-            <option value="teacher">Professeur</option>
-          </select>
-        </div> -->
-        <div id="studentLogin">
-<<<<<<< Updated upstream
-          <h3 class="mt-4" style="padding-left: 10%;padding-right: 0%;text-decoration: underline;">Connexion Etudiant</h3>
-          <form>
-            <div class="mb-3">
-              <label for="studentEmail" class="form-label" style="font-weight: bold;">Adresse e-mail</label>
-              <input type="email" class="form-control" id="studentEmail" placeholder="Entrez votre adresse e-mail">
-            </div>
-            <div class="mb-3">
-              <label for="studentPassword" class="form-label" style="font-weight: bold;">Mot de passe</label>
-              <input type="password" class="form-control" id="studentPassword" placeholder="Entrez votre mot de passe">
-=======
+
           <h3 class="mt-4">Connexion</h3>
           <form method="POST">
             {% csrf_token %}
