@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    background-color: #eee;
+}
+/*Header*/
+header { 
+    -indexz: 10000;
+    color: rgb(44, 185, 185);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    box-shadow: 0px 0px 5px rgb(107, 107, 107);
+}
+header nav {
+    margin: 0px 0px;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .logo img {
+    margin-left: 15px;
+    width: 70px;
+}
+.toggle {
+    display: none;
+}
+header nav .menu{
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .menu li {
+    margin-top: 15px;
+    margin-right: 10px;
+    text-align: center;
+    width: 110px;
+    position: relative;
+    padding: 3px 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: white;
+    font-size: 1.1em;
+    transition: 0.4s;
+    overflow: hidden;
+    z-index: 12;
+}
+.menu li::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 110px;
+    border-radius: 50px;
+    background-color: rgb(59, 59, 59);
+    top: -3px;
+    left: 0;
+    transform: translate(-100%);
+    transition: 0.4s;
+    z-index: -1;
+}
+.menu li.active::before {
+    transform: translate(0%);
+}
+.menu li.active a {
+    color: white;
+}
+.menu li:hover::before {
+    transform: translate(0%);
+}
+.menu li:hover a {
+    color: white;
+}
+.menu a {
+    text-decoration: none;
+    color: rgb(55, 54, 92);
+}
+.menu div.ess {
+    display: none;
+}
+i.ico {
+    display: none;
+}
+@media all and (max-width: 2800px) {
+    header {
+        height: 60px;
+        padding: 0px 0px;
+        position: fixed;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
+    }
+    header nav {
+        margin: 0;
+    }
+    nav {
+        position: absolute;
+    }
+    header nav .toggle{
+        display: block;
+        font-size: 2rem;
+    }
+    .menu li::before {
+        display: none;
+    }
+    .menu li:hover a {
+        color: black;
+    }
+    .menu li.active a {
+        color: rgb(0, 0, 0);
+    }
+    .menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    header nav .menu li {
+        text-align: left;
+        width: 170px;
+        padding: 3px 10px;
+        font-size: 1em;
+    }
+    .toggle { 
+        font-size: 1.6em;
+        display: block;
+        z-index: 10050;
+        color: rgb(0, 0, 0);
+        position: fixed;
+        top: 20px;
+        right: 35px;
+        cursor: pointer;
+    }
+    .ouvrir {
+        display: block;
+    }
+    .fermer {
+        display: none;
+    }
+    .open .ouvrir {
+        display: none;
+    }
+    .open .fermer {
+        display: block;
+    }
+    header nav .menu {
+        width: 70%;
+        height: 100vh;
+    }
+    .menu {
+        font-size: 1.2em;
+        padding: 60px 0px 12rem 10px;
+        width: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: 0.8s;
+    }
+    .menu li {
+        width: 150px;
+    }
+    .menu li a {
+        padding: 0px 10px;
+    }
+    .menu li:hover {
+        border: none;
+        border-radius: 0px;
+        border-bottom: 0.1px solid rgb(88, 71, 71);
+        width: 100%;
+        background-color: #f0eeee;
+    }
+    .open .menu {
+        transform: translateX(0);
+    }
+    i.ico {
+        display: contents;
+        cursor: pointer;
+        display: static;
+        color: black;
+    }
+    nav{
+        z-index: 150000;
+    }
+    
+}
