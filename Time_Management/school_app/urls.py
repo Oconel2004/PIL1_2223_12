@@ -17,8 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from timemanage.views import  login
+from timemanage.views import consulter_emploi_du_temps,creer_compte,se_deconnecter,connexion,accueil,inscription,inscription_confirmation,seconnecter
 
 urlpatterns = [
-    path('', login, name='connexion'),
     path('admin/', admin.site.urls),
+    path('accueil', accueil, name='accueil'),
+    path('emploi-du-temps/<int:emploi_du_temps_id>/', consulter_emploi_du_temps, name='consulter_emploi_du_temps'),
+    path('creer-compte/', creer_compte, name='creer_compte'),
+    path('connexion/', connexion, name='se_connecter'),
+    path('se-deconnecter/',se_deconnecter, name='se_deconnecter'),
+    path('inscription_confirmation/',inscription_confirmation, name='inscription'),
+    path('seconnecter/',seconnecter, name='seconnecter'),
+
 ]
