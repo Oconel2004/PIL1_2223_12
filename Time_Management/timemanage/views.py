@@ -1,6 +1,10 @@
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect
 from .models import Emploidutemps, Users
+from django.contrib.auth.tokens import default_token_generator
+from django.shortcuts import redirect
+
+
 def accueil(request):
     # Vue pour afficher la page d'accueil
     emplois_du_temps = Emploidutemps.objects.all()
