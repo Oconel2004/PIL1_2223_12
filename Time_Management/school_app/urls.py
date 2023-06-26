@@ -21,7 +21,7 @@ from timemanage.views import consulter_emploi_du_temps,creer_compte,se_deconnect
 from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accueil', accueil, name='accueil'),
+    path('', accueil, name='accueil'),
     path('emploi-du-temps/<int:emploi_du_temps_id>/', consulter_emploi_du_temps, name='consulter_emploi_du_temps'),
     path('creer-compte/', creer_compte, name='creer_compte'),
     path('connexion/', connexion, name='se_connecter'),
