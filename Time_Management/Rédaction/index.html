@@ -6,14 +6,14 @@
     <title>Rapport Projet-Getion des emplois du temps</title>
     <link rel="stylesheet" href="rap.CSS">
 </head>
-<body>
-    <h1>Rapport Projet-Gestion des emplois du temps</h1>
-    <h2>Groupe de Projet</h2>
-    <p>Nom du groupe: Groupe 12</p>
-    <p>Membres du groupe :
-        <ul>
+<body style="font-family: cursive;background-color:azure;">
+    <h1  style="text-align: center;text-decoration: underline;">----Rapport Projet-Gestion des emplois du temps----</h1>
+    <h2 style="text-align: center;text-decoration: underline;">Groupe de Projet</h2>
+    <p  style="text-align: center;font-weight: bold;text-decoration: underline;">Nom du groupe: Groupe 12</p>
+    <p style="font-weight: bold;text-decoration: underline;">Membres du groupe :
+        <ul >
     
-        <li>ADIDO Obed - Développeur Front-End</li>
+        <li >ADIDO Obed - Développeur Front-End</li>
         <li>AGONSANOU Abdine Ploudhon - Développeur Back-End</li>
         <li>AHO-GLELE Liz Cressone - Développeur Front-End</li>
         <li>CAPO-CHICHI Etsi - Développeur Back-End</li>
@@ -27,9 +27,25 @@
         <li>YEMADJRO Teeyah Martiale - Designer UI/UX</li>
         </ul>
     </p>
-    <h2>Mode de fonctionnement interne du Groupe</h2>
+    <p style="text-align: center;">  <span style="font-weight: bold;text-decoration: underline;">Guide d’utilisation du projet</span> <br>
+
+      <br><br>Dans le but de mener à bien notre appliaction web de gestion des emplois du temps, nous avons créé une base de données composée de trois tables : Users, Promotion, Emplodutemps.
+      Par soucis de sécurité et pour éviter que les etudiants n’étant pas inscrits dans cet établissement puissent avoir accès aux emplois du temps nous avons rempli manuellement la base de données au niveau de la table Users.
+      
+      <br><br><br> <span style="font-weight: bold;text-decoration: underline;">Comment s’inscrire ?</span> <br>
+      Pour s’inscrire sur la plateforme et avoir accès aux emplois du temps, un étudiant doit tout d’abord être inscrit dans l’établissement et disposer d’un numéro matricule. Ensuite, il va sur la plateforme s’il est sûr qu’il est inscrit dans l’établissement. Arrivé sur la plateforme, il sera confronté à la page d’accueil contenant un mot de bienvenue et deux boutons à savoir : « Inscription Etudiant » et « Connexion ». S’il veut s’inscrire sur la plateforme, il clique sur le bouton « Inscription Etudiant » contenant trois champs (numero_matricule, username, mot de passe). Il remplir ces trois champs et si son numéro matricule se trouve dans la base de données, il sera redirigé vers la page de connexion. Sinon si son numéro matricule n’est pas répertorié dans la base de données, cela signifie qu’il n’est pas un étudiant de l’établissement.
+      
+      <br><br><br> <span style="font-weight: bold;text-decoration: underline;">Comment connecter un étudiant ? </span><br>
+      Pour qu’un étudiant inscrit sur la plateforme puisse se connecter, il faut qu’il renseigne au niveau de la page de connexion l’username et le mot de passe qu’il a renseigné au niveau de la page d’inscription. Si ces informations sont correctes, il sera redirigé vers le tableau de bord des étudiants. Sinon si ces informations ne coïncident pas un message d’erreur lui sera envoyé.
+      Comment connecter l’administration ?
+      Par défaut le compte pour l’administration est déjà créé. La page de connexion pour l’administration est le même que celui de l’étudiant à ceci près que lorsque l’administration entre son Username et son mot de passe, la base de données est interrogée pour voir s’il est de l’administration. S’il est de l’administration, et que les informations sont correctes il est redirigé vers le Tableau de bord pour l’administration.
+      
+     <br><br><br>  <span style="font-weight: bold;text-decoration: underline;">Les Dashboards </span><br>
+      <br>Le dashboard de l’étudiant est différent de celui de l’administration. L’administration sur son dashboard peut voir et  éditer les emploi du temps tandis que sur son dashboard, l’etudiant ne peut  que voir les emplois du temps édités par l’administration pour  sa promotion.
+      </p>
+    <h2 style="text-decoration: underline;">Mode de fonctionnement interne du Groupe</h2>
     <p>Pour réaliser ce projet, notre groupe a adopté une approche collaborative et agile, en utilisant la méthodologie Scrum. Chaque membre a été assigné à des rôles spécifiques en fonction de ses compétences et de ses intérêts. Voici la répartition des rôles et contributions.</p>
-    <h3>EGBOGBE Oconel - Chef de Projet: </h3>
+    <h3 style="text-decoration: underline;">EGBOGBE Oconel - Chef de Projet: </h3>
     <p><strong>Rôle:</strong> Assurer la coordination générale du projet, la communication avec les parties prenantes et la gestion des délais.</p>
     <p><strong>Contributions:</strong>
         <ul>
@@ -39,7 +55,7 @@
             <li>Validation finale du projet</li>
         </ul>
     </p>
-    <h3>AHO-GLELE Liz, ADIDO Obed, KOUDJENOUME Modeste - Développeurs Front-End:</h3>
+    <h3 style="text-decoration: underline;">AHO-GLELE Liz, ADIDO Obed, KOUDJENOUME Modeste - Développeurs Front-End:</h3>
     <p><strong>Rôle:</strong> Concevoir et développer l'interface utilisateur de l'application Web.</p>
     <p><strong>Contribution:</strong>
         <ul>
@@ -50,8 +66,8 @@
         <li>Tests et débogage de l'interface utilisateur</li>
        </ul>
     </p>
-    <h3>KOUDJENOUME Modeste :Chef Développeur Back-End</h3>
-    <h3>CAPO-CHICHI Etsi,AGONSANOU Abdine Ploudhon,DEDBEY Mahouna Baron Quiétude ,EGBOGBE Oconel, HASSIKA Nicholson, Développeurs Back-End: </h3>
+  
+    <h3 style="text-decoration: underline;">CAPO-CHICHI Etsi,AGONSANOU Abdine Ploudhon,DEDBEY Mahouna Baron Quiétude ,EGBOGBE Oconel, HASSIKA Nicholson,KOUDJENOUME Modeste Développeurs Back-End: </h3>
     <p>
        <strong>Rôle</strong> : Mettre en place la logique métier de l'application et gérer l'intercation avec la base de données.
     </p>
@@ -64,7 +80,7 @@
             <li>Sécurité et gestion des accès</li>
         </ul>
     </p>
-    <h3>HASSIKA Nicholson,KOUMAGNON Charmence Oluwakemy Océane, MEBOUNOU Rodmel Lucius Sylvanus - Rédaction: </h3>
+    <h3 style="text-decoration: underline;">HASSIKA Nicholson,KOUMAGNON Charmence Oluwakemy Océane, MEBOUNOU Rodmel Lucius Sylvanus - Rédaction: </h3>
     <p><strong>Rôle</strong> : Rédiger le rapport de projet. 
 
     </p>
@@ -74,7 +90,7 @@
             <li>Description détaillée des objectifs du projet, de l'analyse des besoins,des spécifications fonctionnelles et techniques, des contraintes, des risques identifiés, du plan de développement.</li>
         </ul>
     </p>
-    <h3>YEMADJRO Teeyah,TADOGBE Steffi - Designer UI/UX:</h3>
+    <h3 style="text-decoration: underline;">YEMADJRO Teeyah,TADOGBE Steffi - Designer UI/UX:</h3>
     <p><strong>Rôle:</strong>Créer une expérience utilisateur attrayante et conviviale pour l'application.</p>
     <p><strong>Contributions:</strong>
         <ul>
