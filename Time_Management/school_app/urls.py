@@ -15,23 +15,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 from django.urls import path
-from timemanage.views import  login
-from timemanage.views import consulter_emploi_du_temps,creer_compte,se_deconnecter,connexion,accueil,inscription,inscription_confirmation,seconnecter
+from timemanage.views import  login, inscription, accueil, connexion, dashboard_admin, dashboard_etudiant, ajouter_emploi, modifier_emploi, deconnexion
 from django.contrib.auth import views as auth_views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', accueil, name='accueil'),
-    path('emploi-du-temps/<int:emploi_du_temps_id>/', consulter_emploi_du_temps, name='consulter_emploi_du_temps'),
-    path('creer-compte/', creer_compte, name='creer_compte'),
-    path('connexion/', connexion, name='se_connecter'),
-    path('se-deconnecter/',se_deconnecter, name='se_deconnecter'),
-    path('inscription_confirmation/',inscription_confirmation, name='inscription'),
-    path('seconnecter/',seconnecter, name='seconnecter'),
-    path('password_reset/', auth_views.PasswordResetView.as_view(template_name="password_reset.html"), name='password_reset'),
-    path('reset_password/done/', auth_views.PasswordResetDoneView.as_view(template_name="password_reset_done.html"), name='password_reset_done'),
-    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name="password_reset_confirm.html"), name='password_reset_confirm'),
-    path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name="complete.html"), name='password_reset_complete'),
+    path('inscription/', inscription, name='inscription'),
+    path('connexion/', connexion, name='connexion'),
+    path('deconnexion/', deconnexion, name='deconnexion'),
+    path('dashboard_admin/', dashboard_admin, name='dashboard_admin'),
+    path('dashboard_etudiant/', dashboard_etudiant, name='dashboard_etudiant'),
+    path('ajouter_emploi/', ajouter_emploi, name='ajouter_emploi'),
+    path('modifier_emploi/<int:emploi_id>/', modifier_emploi, name='modifier_emploi'),
+
 ]
 
 

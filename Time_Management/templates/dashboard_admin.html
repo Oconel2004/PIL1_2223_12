@@ -1,0 +1,111 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrattion</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  form label, form input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+  }
+  
+</style>
+</head>
+<body>
+    <header>
+        <h1>Tableau de bord - Administration</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'dashboard_admin' %}">Accueil</a></li>
+                <li><a href="{% url 'ajouter_emploi' %}">Ajouter un emploi</a></li>
+                <li><a href="{% url 'deconnexion' %}">Se déconnecter</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% for promotion in promotions %}
+    <section>
+        <h2>{{ promotion.nom_promotion }}</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Jour de la semaine</th>
+              <th>Cours</th>
+              <th>Heure de début</th>
+              <th>Heure de fin</th>
+              <th>Salle</th>
+              <th>Enseignant</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for emploi_du_temps in emplois_du_temps %}
+              {% if emploi_du_temps.id_promotion == promotion %}
+                <tr>
+                  <td>{{ emploi_du_temps.jour_semaine }}</td>
+                  <td>{{ emploi_du_temps.cours }}</td>
+                  <td>{{ emploi_du_temps.heure_debut }}</td>
+                  <td>{{ emploi_du_temps.heure_fin }}</td>
+                  <td>{{ emploi_du_temps.salle }}</td>
+                  <td>{{ emploi_du_temps.enseignant }}</td>
+                  <td>
+                    <a href="{% url 'modifier_emploi' emploi_du_temps.id_emploi %}">Modifier</a>
+                  </td>
+                  
+                </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+     </section>
+  {% endfor %}
+</body>
+</html>

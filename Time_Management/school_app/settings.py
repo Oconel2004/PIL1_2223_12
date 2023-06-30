@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'school_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'base',
+        'NAME': 'empgestion',
         'USER': 'root',
         'PASSWORD':'root',
         'HOST':'127.0.0.1',
@@ -142,3 +142,7 @@ EMAIL_USE_TLS=True
 EMAIL_HOST_USER=''
 EMAIL_HOST_PASSWORD=''
 DEFAULT_FROM_EMAIL=''
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_SECURE = True  
